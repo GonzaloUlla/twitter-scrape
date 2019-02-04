@@ -1,6 +1,6 @@
 # Twitter Scrape
 
-Scrape tweets from twitter into a DB.  Convert the DB to a CSV file.
+Scrape Tweets from Twitter into a DB.  Dump Tweets to a different JSON file each minute.
 
 ## Installation
 
@@ -21,6 +21,5 @@ Scrape tweets from twitter into a DB.  Convert the DB to a CSV file.
 
 ## Usage
 
-* `python scrape.py` to scrape.  Use `Ctrl + C` to stop.
-* `python dump.py` to generate `tweets.csv`, which contains all the tweet data that was scraped.
-* If you want to edit behavior, change settings in `settings.py`.
+* `python scraper.py [ARGS]` to scrape.  Use `Ctrl + C` to stop.
+* `python scraper.py --help` to get help.
