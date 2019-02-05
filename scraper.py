@@ -40,7 +40,7 @@ class StreamListener(tweepy.StreamListener):
         if coords is not None:
             coords = json.dumps(coords)
 
-        table = db[datetime.now().strftime("%Y-%m-%d_%H:%M")]
+        table = db[datetime.now().strftime("%Y-%m-%d-%H_%M")]
         try:
             table.insert(dict(
                 user_description=description,
@@ -98,7 +98,7 @@ print("Arguments passed: {0}".format(str(args)[10:-1]))
 
 def dump_json_worker():
     while True:
-        date_now = datetime.now().strftime("%Y-%m-%d_%H:%M")
+        date_now = datetime.now().strftime("%Y-%m-%d-%H_%M")
         time_sleep = 60 if datetime.now().second < 50 else 10
         time.sleep(time_sleep)
         db = dataset.connect(settings.CONNECTION_STRING)
