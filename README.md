@@ -1,10 +1,16 @@
 # Twitter Scrape
 
-Scrape Tweets from Twitter into a DB.  Dump Tweets to a different JSON file each minute.
+Scrapes Tweets from Twitter into a DB.  Dumps Tweets to a different JSON file each minute.
+
+Calculates the number of tweets per minute that contain a particular term in their message.
 
 ## Installation
 
 * `pip install -r requirements.txt`
+
+## Usage
+* `python scraper.py -h`
+* `python count_tweets_per_minute.py -h` or `./count_tweets_per_minute.sh [TERM]` (Docker)
 
 ## Setup
 
