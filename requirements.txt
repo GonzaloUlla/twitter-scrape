@@ -8,3 +8,4 @@ dataset
 psycopg2
 textblob
 datafreeze
+pyspark
